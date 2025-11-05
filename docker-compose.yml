@@ -7,7 +7,7 @@ services:
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redisdata:/data
-    restart: always
+    restart: unless-stopped
 
 volumes:
   redisdata:
